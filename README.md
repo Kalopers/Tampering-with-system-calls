@@ -65,6 +65,14 @@ The main components of the code include:
 
 - Ensure that you have the necessary permissions to load and unload kernel modules.
 
+- Remember to update the 'p_sys_call_table' after each system reboot, you can get it with the following command:
+
+```bash
+cat /proc/kallsyms | grep sys_call_table 
+```
+
+
+
 ## License
 
 This module is licensed under the GNU General Public License (GPL).
