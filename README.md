@@ -67,9 +67,9 @@ The main components of the code include:
 
 - Remember to update the 'p_sys_call_table' after each system reboot, you can get it with the following command:
 
-```bash
-cat /proc/kallsyms | grep sys_call_table 
-```
+   ```bash
+   cat /proc/kallsyms | grep sys_call_table 
+   ```
 
 
 
