@@ -38,22 +38,6 @@ asmlinkage long long hello(void)
     return a + b;
 }
 
-/*static struct {
-  void **sys_call_table;
-  void *orig_fn;
-} tinfo;
-
-static int __init mod_init(void) {
-  printk(KERN_INFO "Init syscall hook\n");
-  tinfo.sys_call_table = (void **)kallsyms_lookup_name("sys_call_table");
-  tinfo.orig_fn = tinfo.sys_call_table[your_syscall_num];
-  disable_write_protection();
-  // modify sys_call_table directly
-  tinfo.sys_call_table[your_syscall_num] = sys_yourcall;
-  enable_write_protection();
-  return 0;
-}*/
-
 void modify_syscall(void)
 {
     unsigned long long *sys_call_addr;

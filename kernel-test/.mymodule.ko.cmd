@@ -1,1 +1,0 @@
-cmd_/home/ubuntu/os/kernel-test/mymodule.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/ubuntu/os/kernel-test/mymodule.ko /home/ubuntu/os/kernel-test/mymodule.o /home/ubuntu/os/kernel-test/mymodule.mod.o;  true
