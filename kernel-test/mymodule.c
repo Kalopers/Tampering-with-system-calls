@@ -8,7 +8,7 @@
 #define __force_order (*(volatile char*)0)
 #define sys_No 96
 unsigned long long old_sys_call_func;
-unsigned long long p_sys_call_table = 0xffffffffb9800300; //= (unsigned long long)kallsyms_lookup_name("sys_call_table");
+unsigned long long p_sys_call_table = 0xffffffffb9800300; 
 
 inline void mywrite_cr0(unsigned long cr0) {
   asm volatile("mov %0,%%cr0" : "+r"(cr0), "+m"(__force_order));
