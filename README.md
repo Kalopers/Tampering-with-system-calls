@@ -2,11 +2,6 @@
 
 This Linux kernel module demonstrates how to modify a system call (syscall) in the kernel. The module replaces the functionality of a specific syscall with a custom function, logging information about the syscall parameters.
 
-## Prerequisites
-
-- This module is designed for Linux kernel development.
-- Ensure that you have the necessary build tools and kernel headers installed on your system.
-
 ## Overview
 
 The module performs the following tasks:
@@ -14,20 +9,6 @@ The module performs the following tasks:
 1. Disables write protection on the kernel page tables.
 2. Modifies the specified syscall in the syscall table to point to a custom function (`hello`).
 3. Enables write protection again to safeguard kernel integrity.
-
-## Code Explanation
-
-The main components of the code include:
-
-- `hello`: A custom function that logs information about the parameters of the modified syscall.
-
-- `modify_syscall`: A function that replaces the specified syscall with the custom function.
-
-- `restore_syscall`: A function that restores the original syscall function.
-
-- `mymodule_init`: The module initialization function that disables write protection and modifies the syscall.
-
-- `mymodule_exit`: The module exit function that restores the original syscall and enables write protection.
 
 ## Usage
 
